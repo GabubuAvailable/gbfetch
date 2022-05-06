@@ -12,7 +12,7 @@
        Y8b d88P                                                              
         "Y88P"                                                               
                              gabubu's fetch. For every linux distro. 
-![gbfetch](https://i.imgur.com/XQLkqQk.png)
+![gbfetch](https://user-images.githubusercontent.com/88589756/167173652-6817e14e-94c7-4163-a967-b32132d6c0f2.png)
 
 #### What it does?
 > Is like any fetch software. It shows you what Linux distro are you using, the kernel, the CPU, the init. and the numbers of packages.
@@ -25,8 +25,3 @@
 > - Manjaro
 > - Ubuntu
 > - Void Linux
-
-#### What if I get that warning? 
-![Warning for not detected distro](https://i.imgur.com/SekUuO8.png)
->Report the fetch alongside with your Linux distro you're using on "Issues" tab from this repository
-
