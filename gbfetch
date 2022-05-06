@@ -22,7 +22,7 @@
 white='\033[0m' # the boring white
 yellow='\033[1;33m' # yellow
 purple='\033[0;35m' # purple
-lblue='\033[1;34m' # light blue
+lblue='\033[0;36m' # light blue
 blue='\033[0;34m' # blue
 lgreen='\033[1;32m' # light green
 green='\033[0;32m' # green
@@ -66,7 +66,7 @@ fi
 
 # If the distro is not any of the above
 if [[ $os =~ "NAME" ]]; then
-	 os="Linux" && art="Linux" # Linux is the "generic" art
+	 os="Unknown Linux" && art="Linux" # Linux is the "generic" art
 fi
 
 # Base
@@ -125,7 +125,6 @@ fi
 
 # Arch Linux based distributions
 if [[ $art =~ "Arch" ]]; then
-echo -e "${red}#################################################################"
 echo -e "${yellow} $user@$host ${white}on ${lblue}$os"
 echo -e "${lblue}          ..         "
 echo -e "${lblue}          -=.        "
@@ -136,13 +135,11 @@ echo -e "${lblue}      -===--===-            ${white}Init: $init"
 echo -e "${lblue}     -===.  .===-.          ${white}CPU: $cpu"
 echo -e "${lblue}   .-===-    :==--   "
 echo -e "${lblue}  .-=-::.    .::-=-. "
-echo -e "${lblue} .:.              .:.                                    ${orange}gbfetch"
-echo -e "${red}#################################################################"
+echo -e "${lblue} .:.              .:."
 fi
 
 # Gentoo Linux based distributions
 if [[ $art =~ "Gentoo" ]]; then
-echo -e "${red}#################################################################"
 echo -e "${yellow} $user@$host ${white}on ${purple}$os"
 echo -e "${purple}     .=+**+=:        "
 echo -e "${purple}   -*%%%%###%#+:     "
@@ -153,13 +150,11 @@ echo -e "${purple}     -+#%%%%%%%%%+.==       ${white}Init: $init"
 echo -e "${purple}   .+%%%%%%%%%#=.=+:        ${white}CPU: $cpu"
 echo -e "${purple} .=%%%%%%%%#+:-++.   "
 echo -e "${purple} -=%%%%#*=--++-      "
-echo -e "${purple} -=--===+*+:                                             ${orange}gbfetch"
-echo -e "${red}#################################################################"
+echo -e "${purple} -=--===+*+:         "
 fi
 
 # Debian based distributions
 if [[ $art =~ "Debian" ]]; then
-echo -e "${red}#################################################################"
 echo -e "${yellow} $user@$host ${white}on ${red}$os"
 echo -e "${red}      :-+===:.    "
 echo -e "${red}    =#*=:..:-+#+. "
@@ -170,13 +165,11 @@ echo -e "${red} -=    .=     .+.        ${white}Init: $init"
 echo -e "${red} .#.    .--::-:          ${white}CPU: $cpu"
 echo -e "${red}  -#.             "
 echo -e "${red}   :+:            "
-echo -e "${red}     :=:                                                 ${orange}gbfetch"
-echo -e "${red}#################################################################"
+echo -e "${red}     :=:          "
 fi
 
 # Ubuntu based distributions
 if [[ $art =~ "Ubuntu" ]]; then
-echo -e "${red}#################################################################"
 echo -e "${yellow} $user@$host ${white}on ${orange}$os"
 echo -e "${orange}                .++-     "
 echo -e "${orange}          .-===-=%%%     "
@@ -187,13 +180,11 @@ echo -e "${orange}   +**:-=         -==:          ${white}Init: $init"
 echo -e "${orange}      :==-       -%%%.          ${white}CPU: $cpu"
 echo -e "${orange}       :==.:===+##*#:    "
 echo -e "${orange}          :%%%%#:--:     "
-echo -e "${orange}             .. .==-                                     ${orange}gbfetch"
-echo -e "${red}#################################################################"
+echo -e "${orange}             .. .==-     "
 fi
 
 # Fedora based distributions
 if [[ $art =~ "Fedora" ]]; then
-echo -e "${red}#################################################################"
 echo -e "${yellow} $user@$host ${white}on ${blue}$os"
 echo -e "${blue}      .-+**#**+=:     "
 echo -e "${blue}    -######*=:::+*=   "
@@ -204,13 +195,11 @@ echo -e "${blue} +##**=        +**###*       ${white}Init: $init"
 echo -e "${blue} +#***#**=  **#######=       ${white}CPU: $cpu"
 echo -e "${blue} +***####+  ########+ "
 echo -e "${blue} +#**+++-  =#######-  "
-echo -e "${blue} =###-..:-*#####+-                                       ${orange}gbfetch"
-echo -e "${red}#################################################################"
+echo -e "${blue} =###-..:-*#####+-    "
 fi
 
 # Manjaro based distributions
 if [[ $art =~ "Manjaro" ]]; then
-echo -e "${red}#################################################################"
 echo -e "${yellow} $user@$host ${white}on ${lgreen}$os"
 echo -e "${lgreen} =============: -====="
 echo -e "${lgreen} =============: -====="
@@ -221,13 +210,11 @@ echo -e "${lgreen} =====- .=====: -=====       ${white}Init: $init"
 echo -e "${lgreen} =====- .=====: -=====       ${white}CPU: $cpu"
 echo -e "${lgreen} =====- .=====: -====="
 echo -e "${lgreen} =====- .=====: -====="
-echo -e "${lgreen} =====- .=====: -=====                                   ${orange}gbfetch"
-echo -e "${red}#################################################################"
+echo -e "${lgreen} =====- .=====: -====="
 fi
 
 # Void Linux based distributions
 if [[ $art =~ "Void" ]]; then
-echo -e "${red}#################################################################"
 echo -e "${yellow} $user@$host ${white}on ${green}$os"
 echo -e "${green}          'cdkOkxl'         "
 echo -e "${green}         cOOOOOOOOOko,      "
@@ -238,35 +225,11 @@ echo -e "${green}     .'    ;Oo  ,     .ko          ${white}Init: $init"
 echo -e "${green}    '::      .c;     .cc:          ${white}CPU: $cpu"
 echo -e "${green}     :::.             .O    "
 echo -e "${green}      .:::'.     ..         "
-echo -e "${green}          :::::::::                                      ${orange}gbfetch"
-echo -e "${red}#################################################################"
+echo -e "${green}          :::::::::         "
 fi
 
 # Unknown based distributions
 if [[ $art =~ "Linux" ]]; then
-echo -e "${white}       ;ok0KXNNNXK0ko:.      "
-echo -e "${white}    ,kWMMMMMMMMMMMMMMMM0c    "
-echo -e "${white}  .0MMMMMMMMMMMMMMMMMMMMMN;  "
-echo -e "${white}  NMMMMMMMWkl;;;lkWMMMMMMMM, "
-echo -e "${white} cMMMMMMMk.       .XMMMMMMMO "
-echo -e "${white} xMMMMMMN          oMMMMMMMO     ${red} ##   ##    ##     #####    ##  ##    ####    ##  ##    ####   "
-echo -e "${white} ........         'NMMMMMMW'     ${red} ##   ##   ####    ##  ##   ### ##     ##     ### ##   ##  ##  "
-echo -e "${white}                'xMMMMMMMN,      ${red} ##   ##  ##  ##   ##  ##   ######     ##     ######   ##      "
-echo -e "${white}             .dXMMMMMMM0:        ${red} ## # ##  ######   #####    ######     ##     ######   ## ###  "
-echo -e "${white}            xMMMMMMM0c.          ${red} #######  ##  ##   ####     ## ###     ##     ## ###   ##  ##  "
-echo -e "${white}           cMMMMMM0.             ${red} ### ###  ##  ##   ## ##    ##  ##     ##     ##  ##   ##  ##  "
-echo -e "${white}           OMMMMMW               ${red} ##   ##  ##  ##   ##  ##   ##  ##    ####    ##  ##    ####   "
-echo -e "${white}            ......           "
-echo -e "${white}            ,ldo:.           "
-echo -e "${white}           XMMMMMW.          "
-echo -e "${white}           :0WMMKo           "
-echo -e " "
-echo -e "${red}                        YOUR LINUX DISTRO CAN'T BE DETECTED!!! SHOWING THE FETCH."
-echo -e "${green}You can report that message alongside with the fetch and the Linux distro you're using as issue on my GitHub repository"
-echo -e "${blue}                           Link: https://github.com/GabubuAvailable/gbfetch"
-sleep 5s
-clear &&
-echo -e "${red}#################################################################"
 echo -e "${yellow} $user@$host ${white}on ${red}$os"
 echo -e "${red}     .,:::,.    "
 echo -e "${red}  .dKMMMMMMMXx' "
@@ -277,8 +240,7 @@ echo -e "${red}       ;0MMWOc.        ${white}Init: $init"
 echo -e "${red}      .MMMO.           ${white}CPU: $cpu"
 echo -e "${red}       ','      "
 echo -e "${red}      ,WMM:     "
-echo -e "${red}       ;o:                                               ${orange}gbfetch"
-echo -e "${red}#################################################################"
+echo -e "${red}       ;o:      "
 fi
 
 exit 0
