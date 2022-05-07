@@ -12,7 +12,7 @@
        Y8b d88P                                                              
         "Y88P"                                                               
                              gabubu's fetch. For every linux distro. 
-![gbfetch](https://user-images.githubusercontent.com/88589756/167173652-6817e14e-94c7-4163-a967-b32132d6c0f2.png)
+![gbfetch](https://user-images.githubusercontent.com/88589756/167246496-16567b15-ec6b-43cf-998f-21d37b8a2861.png)
 
 #### What it does?
 > Is like any fetch software. It shows you what Linux distro are you using, the kernel, the CPU, the init. and the numbers of packages.
