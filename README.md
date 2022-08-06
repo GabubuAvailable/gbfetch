@@ -19,6 +19,7 @@
 
 #### What Linux distros gets detected by at this momment?
 > - Arch Linux
+> - Artix Linux
 > - Debian
 > - Fedora
 > - Gentoo

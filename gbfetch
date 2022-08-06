@@ -30,7 +30,8 @@ red='\033[0;31m' # red
 orange='\033[0;33m' # orange
 
 # Get the OS
-if [[ -f "/etc/os-release" ]]; then
+if [[ -f "/etc/lsb-release" ]]; then
+    os="$(< /etc/lsb-release)"; else
     os="$(< /etc/os-release)"
 fi
 
@@ -52,6 +53,8 @@ if [[ $os =~ "Gentoo" ]]; then
 	os="Gentoo Linux" && art="Gentoo"
 elif [[ $os =~ "Arch" ]]; then
 	os="Arch Linux" && art="Arch"
+elif [[ $os =~ "Artix" ]]; then
+	os="Artix Linux" && art="Artix"
 elif [[ $os =~ "Debian" ]]; then
 	os="Debian Linux" && art="Debian"
 elif [[ $os =~ "Ubuntu" ]]; then
@@ -136,6 +139,21 @@ echo -e "${lblue}     -===.  .===-.          ${white}CPU: $cpu"
 echo -e "${lblue}   .-===-    :==--          ${white}Local IP: `ip -f inet a | awk '/inet / { print $2 }' | tail -n 1 | sed 's/\/.*//'`"
 echo -e "${lblue}  .-=-::.    .::-=-. "
 echo -e "${lblue} .:.              .:."
+fi
+
+# Artix Linux
+if [[ $art =~ "Artix" ]]; then
+echo -e "${yellow} $user@$host ${white}on ${lblue}$os"
+echo -e "${lblue}          .          "
+echo -e "${lblue}         -@=         "
+echo -e "${lblue}        -@@@=               ${white}Kernel: $kernel"
+echo -e "${lblue}       :@@@@@=              ${white}Shell: $shell"
+echo -e "${lblue}           @@@=             ${white}Packages: $pkg"
+echo -e "${lblue}     :@%*=                  ${white}Init: $init"
+echo -e "${lblue}    :@@@@@@@%*-             ${white}CPU: $cpu"
+echo -e "${lblue}   :@@@@@@@@#   --          ${white}Local IP: `ip -f inet a | awk '/inet / { print $2 }' | tail -n 1 | sed 's/\/.*//'`"
+echo -e "${lblue}  :@@@@#+-    %@@@-  "
+echo -e "${lblue} .*+-.         :=*#: "
 fi
 
 # Gentoo Linux based distributions
